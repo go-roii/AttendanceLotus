@@ -19,5 +19,5 @@ is an attendance system
 4. Locate `attendanceLotus.sql` or drag it to the window 
 
 ## Usage
-### Admin
-### Teacher
+#### Admin
+#### Teacher
