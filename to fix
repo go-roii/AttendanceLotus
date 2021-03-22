@@ -1,0 +1,27 @@
+remove alignment
+inconsistent code in students and teacher
+
+
+- cancel button on curriculum
+- spinner arrow button hover press
+- spinner get latest value + increment
+- assign foreign key constraint
+
+- placeholders
+- tableview excess border on right
+- tab order on fields
+- tab focus
+
+- plural/singular 
+- arrow key navigation on tables
+- focus to previous table after esc
+- remove table focus when selecting data from combo box
+- inline fields focus
+- cascade escape to tables i.e. esc to tv_subject then go to tv_class, esc then go th tv_course
+- arrow key travel to tables
+
+TESTING
+- duplicates
+- textfields
+- adding records
+- button functions

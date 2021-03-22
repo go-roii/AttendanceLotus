@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER_LEFT" prefHeight="480.0" prefWidth="320.0" spacing="8.0" styleClass="root" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendanceLotus.controller.loginController">
+   <children>
+       <Label id="login" alignment="CENTER" styleClass="h4" text="Log in" textAlignment="CENTER">
+           <font>
+               <Font name="NimbusRoman-Regular" size="33.0" />
+           </font>
+         <VBox.margin>
+            <Insets bottom="4.0" />
+         </VBox.margin>
+       </Label>
+       <TextField fx:id="textField_username" promptText="username">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TextField>
+       <PasswordField fx:id="textField_password" promptText="password">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></PasswordField>
+       <Button fx:id="button_login" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#login" text="Log in">
+         <VBox.margin>
+            <Insets top="4.0" />
+         </VBox.margin></Button>
+   </children>
+   <padding>
+      <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+   </padding>
+</VBox>

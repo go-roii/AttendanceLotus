@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="mainPane" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../style.css"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="attendanceLotus.controller.teacher.homeController">
+    <left>
+        <VBox fx:id="sidebar" prefWidth="250.0">
+            <Button fx:id="button_expand" mnemonicParsing="false" onAction="#handleButtonAction">
+                <tooltip>
+                    <Tooltip fx:id="tooltip_sidebar" text="Expand sidebar"/>
+                </tooltip>
+                <graphic>
+                    <ImageView pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../resource/image/20dp/menu_20dp.png"/>
+                    </ImageView>
+                </graphic>
+                <VBox.margin>
+                    <Insets bottom="8.0"/>
+                </VBox.margin>
+            </Button>
+            <ToggleButton fx:id="toggleButton_attendance" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                          onAction="#attendanceToggleAction">
+                <tooltip>
+                    <Tooltip text="Attendance"/>
+                </tooltip>
+                <graphic>
+                    <HBox styleClass="iconLabel">
+                        <ImageView fx:id="icon_attendance" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                            <Image url="@../../resource/image/20dp/students_20dp.png"/>
+                        </ImageView>
+                        <Label fx:id="label_attendance" text="Attendance"/>
+                    </HBox>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="toggleButton_students" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                          onAction="#studentsToggleAction" selected="true">
+                <tooltip>
+                    <Tooltip text="Students"/>
+                </tooltip>
+                <graphic>
+                    <HBox styleClass="iconLabel">
+                        <ImageView fx:id="icon_students" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                            <Image url="@../../resource/image/20dp/students_20dp.png"/>
+                        </ImageView>
+                        <Label fx:id="label_students" text="Students"/>
+                    </HBox>
+                </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="toggleButton_classes" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                          onAction="#classesToggleAction">
+                <tooltip>
+                    <Tooltip text="Classes"/>
+                </tooltip>
+                <graphic>
+                    <HBox styleClass="iconLabel">
+                        <ImageView fx:id="icon_classes" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                            <Image url="@../../resource/image/20dp/classes_20dp.png"/>
+                        </ImageView>
+                        <Label fx:id="label_classes" text="Classes"/>
+                    </HBox>
+                </graphic>
+            </ToggleButton>
+            <VBox alignment="BOTTOM_LEFT" VBox.vgrow="ALWAYS">
+                <Button fx:id="button_logout" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#handleButtonAction">
+                    <tooltip>
+                        <Tooltip text="Log out"/>
+                    </tooltip>
+                    <graphic>
+                        <HBox styleClass="iconLabel" BorderPane.alignment="TOP_CENTER">
+                            <ImageView fx:id="icon_logout" pickOnBounds="true" preserveRatio="true" styleClass="icon">
+                                <Image url="@../../resource/image/20dp/logout_20dp.png"/>
+                            </ImageView>
+                            <Label fx:id="label_logout" text="Log out"/>
+                        </HBox>
+                    </graphic>
+                </Button>
+            </VBox>
+        </VBox>
+    </left>
+</BorderPane>

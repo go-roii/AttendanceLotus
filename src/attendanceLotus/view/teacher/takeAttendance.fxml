@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<VBox stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="attendanceLotus.controller.teacher.takeAttendanceController">
+    <TabPane fx:id="tabPane_takeAttendance" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <Tab text="Take Attendance">
+            <VBox>
+                <HBox styleClass="app-bar">
+                    <StackPane alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                        <TextField fx:id="textField_search" maxWidth="610.0" promptText="Search students"
+                                   styleClass="search-bar"/>
+                    </StackPane>
+                    <HBox alignment="CENTER_RIGHT" spacing="8.0">
+                        <ComboBox id="combo-box-attendance" fx:id="comboBox_curriculum" onAction="#updateCCLSU_ID"
+                                  promptText="Select subject"/>
+                    </HBox>
+                </HBox>
+                <VBox styleClass="view-pane-a" VBox.vgrow="ALWAYS">
+                    <HBox styleClass="date-picker-bar">
+                        <DatePicker fx:id="datePicker_attendance" editable="false"/>
+                        <Button id="button-previous" fx:id="button_previous" mnemonicParsing="false"
+                                onAction="#handleButtonAction"/>
+                        <Button id="button-next" fx:id="button_next" mnemonicParsing="false"
+                                onAction="#handleButtonAction"/>
+                        <HBox alignment="CENTER_RIGHT" spacing="6.0" HBox.hgrow="ALWAYS">
+                            <Button id="button-clear" fx:id="button_clear" disable="true" mnemonicParsing="false"
+                                    onAction="#clearAttendance" styleClass="button-destructive">
+                                <HBox.margin>
+                                    <Insets right="8.0"/>
+                                </HBox.margin>
+                            </Button>
+                            <Button id="button-restart" fx:id="button_refresh" mnemonicParsing="false"
+                                    onAction="#syncAttendance"/>
+                            <Button id="button-save" fx:id="button_save" disable="true" mnemonicParsing="false"
+                                    onAction="#saveAttendance" styleClass="button-suggested" text="Save"/>
+                        </HBox>
+                    </HBox>
+                    <TableView fx:id="tableView_students" minWidth="-Infinity" styleClass="table-view-no-selection"
+                               VBox.vgrow="ALWAYS">
+                        <placeholder>
+                            <Label text="No student in table"/>
+                        </placeholder>
+                        <columns>
+                            <TableColumn fx:id="tableColumn_fName" minWidth="120.0" prefWidth="-1.0" text="First Name"/>
+                            <TableColumn fx:id="tableColumn_mName" minWidth="120.0" prefWidth="-1.0"
+                                         text="Middle Name"/>
+                            <TableColumn fx:id="tableColumn_lName" minWidth="120.0" prefWidth="-1.0" text="Last Name"/>
+                            <TableColumn fx:id="tableColumn_present" minWidth="100.0" prefWidth="-1.0" resizable="false"
+                                         sortable="false" styleClass="table-column-attendance-button" text="Present"/>
+                            <TableColumn fx:id="tableColumn_absent" minWidth="100.0" prefWidth="-1.0" resizable="false"
+                                         sortable="false" styleClass="table-column-attendance-button" text="Absent"/>
+                            <TableColumn fx:id="tableColumn_late" maxWidth="1.7976931348623157E308" minWidth="100.0"
+                                         prefWidth="-1.0" resizable="false" sortable="false" text="Late">
+                                <styleClass>
+                                    <String fx:value="column-header-last"/>
+                                    <String fx:value="table-column-attendance-button"/>
+                                </styleClass>
+                            </TableColumn>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </VBox>
+        </Tab>
+        <Tab text="View Attendance">
+            <fx:include source="viewAttendance.fxml"/>
+        </Tab>
+    </TabPane>
+</VBox>

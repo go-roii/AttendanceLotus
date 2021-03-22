@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" stylesheets="@../../style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="attendanceLotus.controller.teacher.viewAttendanceController">
+    <HBox styleClass="app-bar">
+        <StackPane alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <TextField fx:id="textField_search" maxWidth="610.0" promptText="Search students" styleClass="search-bar" />
+        </StackPane>
+        <HBox alignment="CENTER_RIGHT" spacing="8.0">
+            <ComboBox id="combo-box-attendance" fx:id="comboBox_curriculum" onAction="#updateCCLSU_ID" promptText="Choose a subject" />
+        </HBox>
+    </HBox>
+    <VBox styleClass="view-pane-a" VBox.vgrow="ALWAYS">
+        <HBox styleClass="date-picker-bar">
+            <DatePicker fx:id="datePicker_attendanceFrom" editable="false" styleClass="no-day-name" />
+            <DatePicker fx:id="datePicker_attendanceTo" editable="false" layoutX="10.0" layoutY="10.0" styleClass="no-day-name" />
+            <HBox alignment="CENTER_RIGHT" spacing="6.0" HBox.hgrow="ALWAYS">
+<!--                <ComboBox id="combo-box-attendance" fx:id="comboBox_curriculum" onAction="#updateCCLSU_ID"-->
+<!--                          promptText="Choose a subject"/>-->
+                <Button id="button-restart" fx:id="button_refresh" layoutX="324.0" layoutY="12.0" mnemonicParsing="false" onAction="#syncAttendance" />
+            </HBox>
+        </HBox>
+        <TableView fx:id="tableView_students" minWidth="-Infinity" styleClass="table-view-no-selection" VBox.vgrow="ALWAYS">
+            <placeholder>
+                <Label text="No student in table" />
+            </placeholder>
+            <columns>
+                <TableColumn fx:id="tableColumn_fName" minWidth="120.0" prefWidth="-1.0" text="First Name" />
+                <TableColumn fx:id="tableColumn_mName" minWidth="120.0" prefWidth="-1.0" text="Middle Name" />
+                <TableColumn fx:id="tableColumn_lName" minWidth="120.0" prefWidth="-1.0" text="Last Name" />
+                <TableColumn fx:id="tableColumn_present" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Present" />
+                <TableColumn fx:id="tableColumn_absent" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Absent" />
+                <TableColumn fx:id="tableColumn_late" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" styleClass="column-header-last" text="Late" />
+            </columns>
+        </TableView>
+    </VBox>
+</VBox>
