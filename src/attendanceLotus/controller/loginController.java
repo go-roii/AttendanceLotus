@@ -73,7 +73,7 @@ public class loginController {
 
                         if (rs2.next()) {
                             Parent homeScreen = FXMLLoader.load(getClass().getResource("/attendanceLotus/view/admin/home.fxml"));
-                            stage.setTitle("School Attendance - Admin");
+                            stage.setTitle("AttendanceLotus - Admin");
                             stage.setScene(new Scene(homeScreen
                                     , 1280, 640
                                     ));
@@ -92,7 +92,7 @@ public class loginController {
 
                             homeController.loginTeacherID = rs2.getInt("teacherID");
                             Parent homeScreen = FXMLLoader.load(getClass().getResource("/attendanceLotus/view/teacher/home.fxml"));
-                            stage.setTitle("School Attendance - " + teacherName);
+                            stage.setTitle("AttendanceLotus - " + teacherName);
                             stage.setScene(new Scene(homeScreen, 1080, 640));
                         }
                         else {

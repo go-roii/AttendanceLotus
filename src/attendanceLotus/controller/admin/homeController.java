@@ -102,7 +102,7 @@ public class homeController implements Initializable {
             if (result.orElse(buttonType_cancel) == buttonType_logout) {
                 Parent login = FXMLLoader.load(getClass().getResource("/attendanceLotus/view/login.fxml"));
                 Stage stage = new Stage();
-                stage.setTitle("School Attendance");
+                stage.setTitle("AttendanceLotus");
                 stage.setScene(new Scene(login));
                 stage.show();
 
