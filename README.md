@@ -23,7 +23,7 @@ is an attendance system
 ## Setup
 1. Start MySQL in XAMPP
 2. Open <https://localhost/phpmyadmin>
-3. Create new database named `attendanceLotus`
+3. Create new database named `attendancelotus`
 4. Click **Import**
 5. Locate `AttendanceLotus/db/attendanceLotus.sql` then **Click File** or drag it to the window 
 ## Usage
