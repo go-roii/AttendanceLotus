@@ -21,7 +21,7 @@ is an attendance system
 ![Teacher user - Students](readme-assets/teacher/teacher_students.png)
 ![Teacher user - Classes](readme-assets/teacher/teacher_classes.png)
 ## Setup
-1. Start MySQL in XAMPP
+1. Start MySQL and Apache in XAMPP
 2. Open <https://localhost/phpmyadmin>
 3. Create new database named `attendancelotus`
 4. Click **Import**
