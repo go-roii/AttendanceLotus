@@ -1,5 +1,5 @@
 # AttendanceLotus
-is an attendance system
+AttendanceLotus is an attendance system capable of taking attendance with multiple classes.
 ## Features
 - Simple UI
 - Search students or teachers
