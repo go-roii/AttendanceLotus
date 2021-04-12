@@ -12,8 +12,7 @@ AttendanceLotus is an attendance system capable of taking attendance with multip
 ![Admin user - Curriculums](readme-assets/admin/admin_curriculums.png)
 
 #### Teacher
-- Take attendance
-- View attendance
+- Take/View attendance
 - Add students to classes
 - Add classes
 
